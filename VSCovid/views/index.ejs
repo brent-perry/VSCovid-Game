@@ -1,0 +1,51 @@
+<%- include('partials/base'); -%>
+<%- include('partials/header'); -%>
+<%- include('partials/overlay'); -%>
+<div class="container-fluid" id='container'>
+<div class="row">
+    <div class="col-12 col-md-2" style="padding-left: 0; padding-right:0;">
+        <%- include('partials/sidebar'); -%>
+    </div>
+    <div class="col-12 col-md-8" id='canvas-container'>
+        <canvas id='canvas'></canvas>
+    </div>
+    <div class="col-12 col-md-2" id='chat-container'>
+        <h3>Message board:</h3>
+        <ul id='chat-display'>
+        </ul>
+        <input id='chat-input' type='text'
+               placeholder='type then press ENTER...' name='chat' />
+    </div>
+</div>
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center" style="display: inline-flex;">
+            <div class="vc-key-icon">
+                <img src='/client/img/favicon.png' height="30px" />
+                <div>Charlene<br/>Bollinger</div>
+            </div>
+            <div class="vc-key-icon">
+                <img src='/client/img/healthpack_powerup.png' />
+                <div style="bottom: 4px;">Powerup<br/>Health</div>
+            </div>
+            <div class="vc-key-icon">
+                <img src='/client/img/rapidfire_powerup.png' />
+                <div>Rapidfire<br/>Powerup</div>
+            </div>
+            <div class="vc-key-icon">
+                <img src='/client/img/shield_powerup.png' />
+                <div>Knowledge<br/> Powerup</div>
+            </div>
+            <div class="vc-key-icon">
+                <img src='/client/img/shotgun_powerup.png' />
+                <div style="bottom: 4px;">Random<br/> Powerup</div>
+            </div>
+            <div class="vc-key-icon">
+                <img src='/client/img/speedboost_powerup.png' />
+                <div>Speedbost<br/>Powerup</div>
+            </div>
+        </div>
+    </div>
+
+
+<%- include('partials/footer'); -%>
+

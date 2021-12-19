@@ -1,0 +1,47 @@
+<!-- START: partials/sidenav.ejs -->
+<div id="mySidenav" class="sidenav">
+    <h5 class="text-center text-white" style="background-color: darkmagenta; height: 50px;padding-top:15px;">TOP SCORES:</h5>
+    <!-- Sidenav toggle chevron -->
+    <!--a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+        <span class="sidenav-chevron-box">&lang;</span>
+    </a-->
+    <div class="row" style="padding-left:0; padding-right: 0;">
+        <div class="col-7"><strong>Username</strong></div>
+
+        <div class="col-4"><strong>Score</strong></div>
+
+    </div>
+    <% for(var i=0; i<players.length; i++) { %>
+        <div class="row mean-table-row">
+
+            <div class="col-7">
+                <span><%= players[i].username %></span><br/>
+            </div>
+            <div class="col-4">
+                <span><%= players[i].score %></span><br/>
+            </div>
+        </div>
+    <% } %>
+    <h5 class="text-center text-white mt-5" style="background-color: darkmagenta; height: 50px;padding-top:15px;">CURRENT SCORES:</h5>
+    <!-- Leaderboard -->
+    <div id="leaderboard-container" >
+        <ul id="leaderboard"><!-- no child elements of <li> --></ul>
+    </div>
+</div>
+
+<!-- Leaderboard -->
+
+
+
+<div class="sidenav-chevron-box-div" onclick="openNav()">
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "225px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0px";
+        }
+    </script>
+    <span class="sidenav-chevron-box">&rang;</span>
+</div>

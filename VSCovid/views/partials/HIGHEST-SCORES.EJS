@@ -1,0 +1,31 @@
+<hr/>
+<div class="row">
+    <div class="col-12">
+        <h3>THE Highest Scoring Players:</h3>
+    </div>
+</div>
+<div class="row mean-table-row">
+    <div class="col-2">&nbsp;</div>
+    <div class="col-2"><strong>Real Name</strong></div>
+    <div class="col-2"><strong>Username</strong></div>
+    <div class="col-2"><strong>Email</strong></div>
+    <div class="col-2"><strong>Score</strong></div>
+</div>
+<% for(var i=0; i<players.length; i++) { %>
+    <div class="row mean-table-row">
+        <div class="col-2">&nbsp;</div>
+        <div class="col-2">
+            <span><%= players[i].name %></span>
+        </div>
+        <div class="col-2">
+            <span><%= players[i].username %></span><br/>
+        </div>
+        <div class="col-2">
+            <span><%= players[i].email %></span><br/>
+        </div>
+        <div class="col-2">
+            <span><%= players[i].score %></span><br/>
+        </div>
+    </div>
+<% } %>
+<hr/>

@@ -1,0 +1,41 @@
+<!-- START: partials/overlay -->
+<div id='name-prompt-overlay'>
+    <div id='name-prompt-container'>
+        <h3 class="text-white">VC Covid - Fight Anti-vax Covidiots!</h3>
+        <p class="text-white">Or, be an anti-vaxxer. The choice is yours. Pick a side, then play the game and do your best to
+            eradicate Covid before it mutates and kills more humans.</p>
+        <p class="text-white" style="font-size: 0.8rem;">If no one is in the game, invite a friend -> </p>
+        <form id='name-form'>
+            <input type='text' id='name-input' placeholder='Username'
+                   autocomplete='off' />
+            <button class="button-name-prompt" id='name-submit' >
+                Play
+            </button>
+            <script>
+                function validation(){
+                    // class member vars
+                    let uname = document.getElementById("name-input").value;
+                    console.log("uname is: " + uname);
+                    if (! /^[a-zA-Z0-9]+$/.test(uname)) {
+                        // Validation failed
+                        // TODO: provide "NICER" error message
+                        alert("Your username cannot contain characters other than a-z, A-Z, 0-9");
+
+
+
+                    }
+                    else
+                    {
+                        $("#name-prompt-overlay").remove();
+                        // code to place username in mongodb PRIORITY 3
+                        // TDO: in mongo - set up a new database, collection
+                        // add the username to mongo IF unique
+                        // if not unique - handle
+                    }
+                }
+            </script>
+        </form>
+    </div>
+</div>
+
+<!-- START: partials/overlay -->
